@@ -70,8 +70,8 @@ void display_update(void) {
       if(c & 0x80)
         continue;
       
-      //for(k = 0; k < 8; k++)
-      // spi_send_recv(font[c*8 + k]);
+      for(k = 0; k < 8; k++)
+       spi_send_recv(font[c*8 + k]);
     }
   }
 }
@@ -133,16 +133,6 @@ while( x > 65 ){
 }
 }
 
-void display_clear()
-{
-
-  int i, j;
-  for(i = 0; i < 31; i++)
-    for(j = 0; j < 127; j++)
-      pixel_clr(j, i);
-
-
-}
 
 
 
