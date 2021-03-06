@@ -93,6 +93,46 @@ void btn_check()
 
 }
 
+void rng()
+{
+
+	uint8_t rng_value = getbtns() & 7;
+	rng_global_value = (uint8_t) (game_ticks * rng_value) & 7;
+
+}
+
+void rng2()
+{
+
+	if(new_shape_flag)
+		{
+			rng_global_value = rotate_flag + go_right_flag + go_left_flag + lock + lock2;
+
+				if(rng_global_value > 7)
+					rng_global_value += -4;
+
+			rng_counter = 0;
+		}
+}
+
+void rng3()
+{
+	rng_counter++;
+	if(rng_counter > 7)
+		rng_counter = 1;
+
+
+	if(new_shape_flag)
+	{
+		rng_global_value = rng_counter;
+		if(rng_global_value == 6)
+			rng_global_value = 5;
+	}
+}
+
+
+
+
 void animation()
 {
 
@@ -838,7 +878,7 @@ shape rotation_handler()
 
 }
 
-	void row_check()
+void row_check()
 {
 	uint8_t row = obj.r1;
 	int clear = 0;
