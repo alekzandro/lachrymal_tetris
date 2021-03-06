@@ -712,54 +712,61 @@ shape rotation_handler()
 		break;
 
 	case 8: // J0	-> J1
-		//temp.r1
-		temp.b1 += -1;
 		temp.r2 += -1;
-		temp.b2 += -2;
-		//temp.r3 += 0;
-		//temp.b3 += 1;
+		temp.b2 += -1;
+		temp.r3 += 0;
+		temp.b3 += 1;
 		temp.r4 += 1;
-		temp.b4 += -1;
-		temp.shape_index += 1;
+		temp.b4 += -2;
+		temp.shape_index =9;
+		temp.bottom_cube = temp.r4;
+		temp.right_cube = temp.b2;
+		temp.left_cube = temp.b1;
+
 			return temp;
 		break;
 
 		case 9: // J1	-> J2
-		temp.r1 += -1;
-		temp.b1 += 1;
-		temp.r2 += 1;
-		temp.b2 += 1;
-		//temp.r3 += -1;
-		temp.b3 += 1;
-		//temp.r4 += -1;
-		temp.b4 += 1; 
-		temp.shape_index += 1;
+		temp.r3 -= 1;
+		temp.b3 -= 2;
+		temp.r4 -= 1;
+		temp.b4 -= 2; 
+		temp.shape_index =10;
+		temp.bottom_cube = temp.r4;
+		temp.right_cube = temp.b3;
+		temp.left_cube = temp.b1;
 			return temp;
 		break;
 
 		case 10: // J2	-> j3
-		temp.r1 += -1;
-		temp.b1 += -1;
-		//temp.r2 += 1;
-		//temp.b2 += 0;
-		temp.r3 += 1;
-		temp.b3 += 2;
-		//temp.r4 += 1;
-		temp.b4 += 1;
-		temp.shape_index += 1;
+		temp.r1 = temp.r2;
+		temp.b1 = temp.b2;
+		temp.r2 += 1;
+		temp.b2 += 0;
+		temp.r3 += 2;
+		temp.b3 += 1;
+		temp.r4 += 1;
+		temp.b4 += 2;
+		temp.shape_index =11;
+		temp.bottom_cube = temp.r4;
+		temp.right_cube = temp.b1;
+		temp.left_cube = temp.b3;
 			return temp;
 		break;
 
 		case 11: // J3 		-> J0
-		//temp.r1 += 0;
-		temp.b1 += -1;
-		//temp.r2 += 0;
-		temp.b2 += 1;
+		temp.r1 += 0;
+		temp.b1 += 2;
+		temp.r2 += 0;
+		temp.b2 += 2;
 		temp.r3 += -1;
-		temp.b3 += -11;
+		temp.b3 += 1;
 		temp.r4 += -1;
 		temp.b4 += -1; 
-		temp.shape_index += -3;
+		temp.shape_index =8;
+		temp.bottom_cube = temp.r2;
+		temp.right_cube = temp.b4;
+		temp.left_cube = temp.b1;
 			return temp;
 		break;
 
@@ -823,30 +830,32 @@ shape rotation_handler()
 		break;
 
 		case 16: // Z0    -> Z1
-		//temp.r1 += 0;
-		temp.b1 += 2;
+		temp.b1 -= 1;
 		temp.r2 += 1;
-		//temp.b2 += 0;
-		//temp.r3 += 0;
-		temp.b3 += -1;
+		temp.b3 -= 1;
 		temp.r4 += 1;
-		temp.b4 +=  1;
-		temp.shape_index +=1;
+		temp.b4 +=  2;
+		temp.shape_index = 17;
+		temp.right_cube  = temp.b1;
+		temp.bottom_cube = temp.r4;
+
 			return temp;
 		break;
 
 		case 17: // Z1.    -> Z0
-		//temp.r1 += 0;
-		temp.b1 += -2;
-		temp.r2 += -1;
-		//temp.b2 += 0;
-		//temp.r3 += 0;
+		temp.b1 += 1;
+		temp.r2 -= 1;
+		temp.b2 += 0;
 		temp.b3 += 1;
-		temp.r4 += -1;
-		temp.b4 +=  -1;
-		temp.shape_index += -1;
+		temp.r4 -= 1;
+		temp.b4 -=  2;
+		temp.shape_index = 16;
+		temp.right_cube  = temp.b4;
+		temp.bottom_cube = temp.r3;
+
 			return temp;
 		break;
+
 
 		case 18: // S0    -> S1
 		temp.r1 += 0;
