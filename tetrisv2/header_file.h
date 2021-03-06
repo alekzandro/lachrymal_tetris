@@ -178,4 +178,7 @@ uint8_t collision_check(uint8_t row, uint8_t block);
 uint8_t collision_check_down(void);
 uint8_t collision_check_rigth(void);
 uint8_t collision_check_left(void);
+void display_number(uint8_t number, uint8_t row, uint8_t col);
+void display_char(char* chr, uint8_t row, uint8_t col);
+int getSize(char* c);
 
