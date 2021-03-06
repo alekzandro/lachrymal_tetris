@@ -3,7 +3,7 @@
 #include "header_file.h" 
 
 uint8_t timeout_counter = 0;
-uint8_t fall_speed = 6;	//lower fall_speeds -> faster fall
+uint8_t fall_speed = 1;	//lower fall_speeds -> faster fall
 uint8_t index = 0;
 int a = 0;
 int b = 1;
@@ -60,6 +60,7 @@ if(rotate_flag || go_left_flag || go_right_flag)
 if((*ifs_ptr & 0x100) != 0){ 
 timeout_counter++;
 index++;
+
 
 	if(interrupt_test){
 		logic_to_pixel_set(i, 2);
