@@ -52,7 +52,6 @@ uint8_t spi_send_recv(uint8_t data) {
 	return SPI2BUF;
 }
 
-/*
 void display_update(void) {
   int i, j, k;
   int c;
@@ -76,7 +75,7 @@ void display_update(void) {
     }
   }
 }
-*/
+
 
 void display_init(void) {
         DISPLAY_CHANGE_TO_COMMAND_MODE;
@@ -134,6 +133,16 @@ while( x > 65 ){
 }
 }
 
+void display_clear()
+{
+
+  int i, j;
+  for(i = 0; i < 31; i++)
+    for(j = 0; j < 127; j++)
+      pixel_clr(j, i);
+
+
+}
 
 
 
@@ -273,8 +282,8 @@ switch(y)
 }
 
 }
-/*
 
+/*
 void display_debug( volatile int * const addr )
 {
   display_string( 1, "Addr" );
@@ -284,7 +293,7 @@ void display_debug( volatile int * const addr )
   display_update();
 }
 
-
+/*
 void display_string(int line, char *s) {
   int i;
   if(line < 0 || line >= 4)
