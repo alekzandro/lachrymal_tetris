@@ -283,6 +283,334 @@ switch(y)
 
 }
 
+void display_number(uint8_t number, uint8_t row, uint8_t col){
+  uint8_t offset_x = (row * 6);
+  uint8_t offset_y = 24 - (col * 6);
+
+
+  switch(number){
+    case 0:
+    pixel_set(offset_x + 1, offset_y +1);
+    pixel_set(offset_x + 2, offset_y +1);
+    pixel_set(offset_x + 3, offset_y +1);
+    pixel_set(offset_x + 4, offset_y +1);
+    pixel_set(offset_x + 5, offset_y +1);
+    pixel_set(offset_x + 1, offset_y +2);
+    pixel_set(offset_x + 5, offset_y +2);
+    pixel_set(offset_x + 1, offset_y +3);
+    pixel_set(offset_x + 2, offset_y +3);
+    pixel_set(offset_x + 3, offset_y +3);
+    pixel_set(offset_x + 4, offset_y +3);
+    pixel_set(offset_x + 5, offset_y +3);
+    break;
+    case 1:
+    pixel_set(offset_x + 1, offset_y +1);
+    pixel_set(offset_x + 2, offset_y +1);
+    pixel_set(offset_x + 3, offset_y +1);
+    pixel_set(offset_x + 4, offset_y +1);
+    pixel_set(offset_x + 5, offset_y +1);
+    break;
+    case 2:
+    pixel_set(offset_x + 1, offset_y +1);
+    pixel_set(offset_x + 2, offset_y +1);
+    pixel_set(offset_x + 3, offset_y +1);
+    pixel_set(offset_x + 5, offset_y +1);
+
+    pixel_set(offset_x + 1, offset_y +2);
+    pixel_set(offset_x + 3, offset_y +2);
+    pixel_set(offset_x + 5, offset_y +2);
+
+    pixel_set(offset_x + 1, offset_y +3);
+    pixel_set(offset_x + 3, offset_y +3);
+    pixel_set(offset_x + 4, offset_y +3);
+    pixel_set(offset_x + 5, offset_y +3);
+
+    break;
+    case 3:
+
+    pixel_set(offset_x + 1, offset_y +1);
+    pixel_set(offset_x + 2, offset_y +1);
+    pixel_set(offset_x + 3, offset_y +1);
+    pixel_set(offset_x + 4, offset_y +1);
+    pixel_set(offset_x + 5, offset_y +1);
+
+    pixel_set(offset_x + 1, offset_y +2);
+    pixel_set(offset_x + 3, offset_y +2);
+    pixel_set(offset_x + 5, offset_y +2);
+
+    pixel_set(offset_x + 1, offset_y +3);
+    pixel_set(offset_x + 3, offset_y +3);
+    pixel_set(offset_x + 5, offset_y +3);
+    break;
+    case 4:
+    pixel_set(offset_x + 1, offset_y +1);
+    pixel_set(offset_x + 2, offset_y +1);
+    pixel_set(offset_x + 3, offset_y +1);
+    pixel_set(offset_x + 4, offset_y +1);
+    pixel_set(offset_x + 5, offset_y +1);
+
+    pixel_set(offset_x + 3, offset_y +2);
+    
+    pixel_set(offset_x + 1, offset_y +3);
+    pixel_set(offset_x + 2, offset_y +3);
+    pixel_set(offset_x + 3, offset_y +3);
+    break;
+    case 5:
+    pixel_set(offset_x + 1, offset_y +1);
+    pixel_set(offset_x + 3, offset_y +1);
+    pixel_set(offset_x + 4, offset_y +1);
+    pixel_set(offset_x + 5, offset_y +1);
+
+    pixel_set(offset_x + 1, offset_y +2);
+    pixel_set(offset_x + 3, offset_y +2);
+    pixel_set(offset_x + 5, offset_y +2);
+
+    pixel_set(offset_x + 1, offset_y +3);
+    pixel_set(offset_x + 2, offset_y +3);
+    pixel_set(offset_x + 3, offset_y +3);
+    pixel_set(offset_x + 5, offset_y +3);
+    break;
+    case 6:
+    pixel_set(offset_x + 1, offset_y +1);
+    pixel_set(offset_x + 3, offset_y +1);
+    pixel_set(offset_x + 4, offset_y +1);
+    pixel_set(offset_x + 5, offset_y +1);
+
+    pixel_set(offset_x + 1, offset_y +2);
+    pixel_set(offset_x + 3, offset_y +2);
+    pixel_set(offset_x + 5, offset_y +2);
+
+    pixel_set(offset_x + 1, offset_y +3);
+    pixel_set(offset_x + 2, offset_y +3);
+    pixel_set(offset_x + 3, offset_y +3);
+    pixel_set(offset_x + 4, offset_y +3);
+    pixel_set(offset_x + 5, offset_y +3);
+    break;
+    case 7:
+    pixel_set(offset_x + 1, offset_y +1);
+    pixel_set(offset_x + 2, offset_y +1);
+    pixel_set(offset_x + 3, offset_y +1);
+    pixel_set(offset_x + 4, offset_y +1);
+    pixel_set(offset_x + 5, offset_y +1);
+
+    pixel_set(offset_x + 1, offset_y +2);
+
+    pixel_set(offset_x + 1, offset_y +3);
+    break;
+    case 8:
+    pixel_set(offset_x + 1, offset_y +1);
+    pixel_set(offset_x + 2, offset_y +1);
+    pixel_set(offset_x + 3, offset_y +1);
+    pixel_set(offset_x + 4, offset_y +1);
+    pixel_set(offset_x + 5, offset_y +1);
+    pixel_set(offset_x + 1, offset_y +2);
+    pixel_set(offset_x + 3, offset_y +2);
+    pixel_set(offset_x + 5, offset_y +2);
+    pixel_set(offset_x + 1, offset_y +3);
+    pixel_set(offset_x + 2, offset_y +3);
+    pixel_set(offset_x + 3, offset_y +3);
+    pixel_set(offset_x + 4, offset_y +3);
+    pixel_set(offset_x + 5, offset_y +3);
+    break;
+    case 9:
+    pixel_set(offset_x + 1, offset_y +1);
+    pixel_set(offset_x + 2, offset_y +1);
+    pixel_set(offset_x + 3, offset_y +1);
+    pixel_set(offset_x + 4, offset_y +1);
+    pixel_set(offset_x + 5, offset_y +1);
+    pixel_set(offset_x + 1, offset_y +2);
+    pixel_set(offset_x + 3, offset_y +2);
+    pixel_set(offset_x + 5, offset_y +2);
+    pixel_set(offset_x + 1, offset_y +3);
+    pixel_set(offset_x + 2, offset_y +3);
+    pixel_set(offset_x + 3, offset_y +3);
+    pixel_set(offset_x + 5, offset_y +3);
+    break;
+  }
+
+
+
+
+
+}
+
+int getSize(char* c){
+  int size =0;
+  char* i;
+  for(i = c; *i != '\0'; i++){
+    size++;
+  }
+return size;
+}
+
+void display_char( char* chr, uint8_t row, uint8_t col){
+  uint8_t offset_x = (row * 6);
+  uint8_t offset_y = 26 - (col * 6);
+  char temp;
+  int i;
+  int size = getSize(chr);
+ 
+
+  for(i = 0; i < size ; i++){
+    temp = *chr;
+    chr++;
+    if((i != 0) && (i % 5 == 0)){
+      offset_x += 6;
+      offset_y = 26;
+    }
+    
+  switch(temp){
+    case 'A':
+    pixel_set(offset_x + 1, offset_y +1);
+    pixel_set(offset_x + 2, offset_y +1);
+    pixel_set(offset_x + 3, offset_y +1);
+    pixel_set(offset_x + 4, offset_y +1);
+    pixel_set(offset_x + 5, offset_y +1);
+
+    pixel_set(offset_x + 1, offset_y +2);
+    pixel_set(offset_x + 3, offset_y +2);
+
+    pixel_set(offset_x + 1, offset_y +3);
+    pixel_set(offset_x + 2, offset_y +3);
+    pixel_set(offset_x + 3, offset_y +3);
+    pixel_set(offset_x + 4, offset_y +3);
+    pixel_set(offset_x + 5, offset_y +3);
+    break;
+    case 'C':
+    pixel_set(offset_x + 1, offset_y +1);
+    pixel_set(offset_x + 5, offset_y +1);
+    pixel_set(offset_x + 1, offset_y +2);
+    pixel_set(offset_x + 5, offset_y +2);
+    pixel_set(offset_x + 1, offset_y +3);
+    pixel_set(offset_x + 2, offset_y +3);
+    pixel_set(offset_x + 3, offset_y +3);
+    pixel_set(offset_x + 4, offset_y +3);
+    pixel_set(offset_x + 5, offset_y +3);
+    break;
+    case 'E':
+    pixel_set(offset_x + 1, offset_y +1);
+    pixel_set(offset_x + 3, offset_y +1);
+    pixel_set(offset_x + 5, offset_y +1);
+
+    pixel_set(offset_x + 1, offset_y +2);
+    pixel_set(offset_x + 3, offset_y +2);
+    pixel_set(offset_x + 5, offset_y +2);
+
+    pixel_set(offset_x + 1, offset_y +3);
+    pixel_set(offset_x + 2, offset_y +3);
+    pixel_set(offset_x + 3, offset_y +3);
+    pixel_set(offset_x + 4, offset_y +3);
+    pixel_set(offset_x + 5, offset_y +3);
+
+    break;
+    case 'G':
+
+    pixel_set(offset_x + 1, offset_y +1);
+    pixel_set(offset_x + 3, offset_y +1);
+    pixel_set(offset_x + 4, offset_y +1);
+    pixel_set(offset_x + 5, offset_y +1);
+
+    pixel_set(offset_x + 1, offset_y +2);
+    pixel_set(offset_x + 5, offset_y +2);
+
+    pixel_set(offset_x + 1, offset_y +3);
+    pixel_set(offset_x + 2, offset_y +3);
+    pixel_set(offset_x + 3, offset_y +3);
+    pixel_set(offset_x + 4, offset_y +3);
+    pixel_set(offset_x + 5, offset_y +3);
+    break;
+    case 'L':
+    pixel_set(offset_x + 5, offset_y +1);
+
+    pixel_set(offset_x + 5, offset_y +2);
+    
+    pixel_set(offset_x + 1, offset_y +3);
+    pixel_set(offset_x + 2, offset_y +3);
+    pixel_set(offset_x + 3, offset_y +3);
+    pixel_set(offset_x + 4, offset_y +3);
+    pixel_set(offset_x + 5, offset_y +3);
+    break;
+    case 'M':
+    pixel_set(offset_x + 2, offset_y +1);
+    pixel_set(offset_x + 3, offset_y +1);
+    pixel_set(offset_x + 4, offset_y +1);
+    pixel_set(offset_x + 5, offset_y +1);
+
+    pixel_set(offset_x + 3, offset_y +2);
+
+    pixel_set(offset_x + 2, offset_y +3);
+    pixel_set(offset_x + 3, offset_y +3);
+    pixel_set(offset_x + 4, offset_y +3);
+    pixel_set(offset_x + 5, offset_y +3);
+    break;
+    case 'O':
+    pixel_set(offset_x + 2, offset_y +1);
+    pixel_set(offset_x + 3, offset_y +1);
+    pixel_set(offset_x + 4, offset_y +1);
+    pixel_set(offset_x + 5, offset_y +1);
+
+    pixel_set(offset_x + 2, offset_y +2);
+    pixel_set(offset_x + 5, offset_y +2);
+
+    pixel_set(offset_x + 2, offset_y +3);
+    pixel_set(offset_x + 3, offset_y +3);
+    pixel_set(offset_x + 4, offset_y +3);
+    pixel_set(offset_x + 5, offset_y +3);
+    break;
+    case 'R':
+    pixel_set(offset_x + 2, offset_y +1);
+    pixel_set(offset_x + 3, offset_y +1);
+    pixel_set(offset_x + 5, offset_y +1);
+
+    pixel_set(offset_x + 2, offset_y +2);
+    pixel_set(offset_x + 4, offset_y +2);
+
+    pixel_set(offset_x + 2, offset_y +3);
+    pixel_set(offset_x + 3, offset_y +3);
+     pixel_set(offset_x + 4, offset_y +3);
+    pixel_set(offset_x + 5, offset_y +3);
+    break;
+    case 'S':
+    pixel_set(offset_x + 1, offset_y +1);
+    pixel_set(offset_x + 3, offset_y +1);
+    pixel_set(offset_x + 4, offset_y +1);
+    pixel_set(offset_x + 5, offset_y +1);
+
+    pixel_set(offset_x + 1, offset_y +2);
+    pixel_set(offset_x + 3, offset_y +2);
+    pixel_set(offset_x + 5, offset_y +2);
+
+    pixel_set(offset_x + 1, offset_y +3);
+    pixel_set(offset_x + 2, offset_y +3);
+    pixel_set(offset_x + 3, offset_y +3);
+    pixel_set(offset_x + 5, offset_y +3);
+    break;
+    case 'V':
+    pixel_set(offset_x + 2, offset_y +1);
+    pixel_set(offset_x + 3, offset_y +1);
+    pixel_set(offset_x + 4, offset_y +1);
+    
+    pixel_set(offset_x + 5, offset_y +2);
+
+    pixel_set(offset_x + 2, offset_y +3);
+    pixel_set(offset_x + 3, offset_y +3);
+    pixel_set(offset_x + 4, offset_y +3);
+    break;
+    case ':':
+    pixel_set(offset_x + 2, offset_y +2);
+    pixel_set(offset_x + 2, offset_y +4);
+    break;
+  }
+  if(temp == ' '){
+    offset_y -= 3;
+  } else {
+    offset_y -= 6;
+  }
+  }
+ 
+}
+
+
 /*
 void display_debug( volatile int * const addr )
 {
