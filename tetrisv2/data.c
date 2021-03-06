@@ -17,19 +17,13 @@ uint8_t score = 0;
 
 
 uint8_t go_left_flag = 0;
-uint8_t go_left_flag2 = 0;
 uint8_t go_right_flag = 0;
-uint8_t go_right_flag2 = 0;
 uint8_t rotate_flag = 0;
 uint8_t new_shape_flag = 0;
 uint8_t game = 1;
 uint8_t lock = 0;
 uint8_t lock2 = 1;
 uint8_t rotate_lock = 0;
-
-uint8_t rng_global_value = 1;
-uint8_t rng_counter = 1;
-long game_ticks = 0;
 
 shape temp;
 shape obj;
