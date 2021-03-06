@@ -65,14 +65,11 @@ int main(void) {
 	display_update();
 	
 	shape_init();
-
-	// needs randomaizer
-	uint8_t lock1_main = 0;
-	uint8_t lock2_main = 1;
-
 	display_frame();
-	obj = shape_handler(2);
+	obj = shape_handler(3);
 	display_shape();
+
+	display_print();	
 	
 	//obj = shape_handler(rng());
 	
@@ -82,26 +79,16 @@ int main(void) {
 
 
 
+
 	while(game)		
 	{
-		game_ticks++;
-		//rng();
-
-		if(lock1_main && !lock2_main)
-		rng();
-		else if(!lock1_main && lock2_main)
-		{
-		rng3();
-		lock1_main = 1;
-		lock2_main = 0;
-	    }
-
+	
 	
 		if(new_shape_flag == 1){
 			go_left_flag = 0;
 			go_right_flag = 0;
 			rotate_flag = 0;
-			obj = shape_handler(rng_global_value);
+			obj = shape_handler(3);
 			new_shape_flag = 0;
 			display_shape();
 
@@ -110,10 +97,13 @@ int main(void) {
 
 		}
 		display_print();
+
 		
 	}
 	
+	
 	spi_send_recv(0xaa);
+	
 
 	return 0;
 }
