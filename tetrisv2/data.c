@@ -27,6 +27,10 @@ uint8_t lock = 0;
 uint8_t lock2 = 1;
 uint8_t rotate_lock = 0;
 
+uint8_t rng_global_value = 1;
+uint8_t rng_counter = 1;
+long game_ticks = 0;
+
 shape temp;
 shape obj;
 
@@ -553,7 +557,7 @@ uint8_t collision_array[20][10] = {
 
 char textbuffer[4][16];
 
-/*
+
 
 const uint8_t const font[] = {
 	0, 0, 0, 0, 0, 0, 0, 0,
@@ -686,6 +690,7 @@ const uint8_t const font[] = {
 	0, 120, 68, 66, 68, 120, 0, 0,
 };
 
+/*
 
 const uint8_t const font2222[] = {
 	0, 0, 0, 0, 0, 0, 0, 0,
