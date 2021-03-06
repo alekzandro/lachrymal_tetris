@@ -36,7 +36,7 @@ void quicksleep(int cyc);
 //void display_debug( volatile int * const addr );
 
 /* Declare bitmap array containing font */
-//extern const uint8_t const font[128*8];
+extern const uint8_t const font[128*8];
 /* Declare bitmap array containing icon */
 //extern const uint8_t const icon[128];
 /* Declare text buffer for display output */
@@ -167,9 +167,6 @@ void delete_shape(void);
 void row_clear(uint8_t _row);
 void move_rows_down(uint8_t clearedRow);
 void row_check(void);
-void rng(void);
-void rng2(void);
-void rng3(void);
 
 
 uint8_t collision_check(uint8_t row, uint8_t block);
@@ -178,4 +175,5 @@ uint8_t collision_check(uint8_t row, uint8_t block);
 uint8_t collision_check_down(void);
 uint8_t collision_check_rigth(void);
 uint8_t collision_check_left(void);
+uint8_t rotation_allowed_check(void);
 
