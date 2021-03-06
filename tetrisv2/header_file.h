@@ -11,7 +11,7 @@
 //void display_image(int x, const uint8_t *data);
 void display_init(void);
 //void display_string(int line, char *s);
-//void display_update(void);
+void display_update(void);
 uint8_t spi_send_recv(uint8_t data);
 
 /* Declare lab-related functions from mipslabfunc.c */
@@ -128,9 +128,13 @@ extern uint8_t rotate_flag;
 extern uint8_t lock;
 extern uint8_t lock2;
 extern uint8_t rotate_lock;
+extern long game_ticks;
+
 
 extern uint8_t game;
 extern uint8_t score;
+extern uint8_t rng_global_value;
+extern uint8_t rng_counter;
 
 extern uint8_t dis_arr[512];
 extern uint8_t* dis_ptr;
@@ -163,7 +167,9 @@ void delete_shape(void);
 void row_clear(uint8_t _row);
 void move_rows_down(uint8_t clearedRow);
 void row_check(void);
-
+void rng(void);
+void rng2(void);
+void rng3(void);
 
 
 uint8_t collision_check(uint8_t row, uint8_t block);
