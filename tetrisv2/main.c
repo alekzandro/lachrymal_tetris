@@ -60,28 +60,48 @@ int main(void) {
 	//set btns as inputs
 	PORTDSET = 0x00e0;
 	
-	display_init();
-	//display_update();
 	timer_setup();
+	display_init();
+	display_update();
+	
 	shape_init();
 
 	// needs randomaizer
-	obj = shape_handler(4);
+	uint8_t lock1_main = 0;
+	uint8_t lock2_main = 1;
 
 	display_frame();
-	
+	obj = shape_handler(2);
 	display_shape();
+	
+	//obj = shape_handler(rng());
+	
 
-	volatile int* ptr = (volatile int*) PORTD;
+//	volatile int* ptr = (volatile int*) PORTD;
 
-	while(game)
+
+
+
+	while(game)		
 	{
+		game_ticks++;
+		//rng();
+
+		if(lock1_main && !lock2_main)
+		rng();
+		else if(!lock1_main && lock2_main)
+		{
+		rng3();
+		lock1_main = 1;
+		lock2_main = 0;
+	    }
+
 	
 		if(new_shape_flag == 1){
 			go_left_flag = 0;
 			go_right_flag = 0;
 			rotate_flag = 0;
-			obj = shape_handler(4);
+			obj = shape_handler(rng_global_value);
 			new_shape_flag = 0;
 			display_shape();
 
