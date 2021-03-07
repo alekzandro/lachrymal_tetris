@@ -894,3 +894,20 @@ void move_rows_down(uint8_t clearedRow){
 }
 
 
+void row_fill(uint8_t _row)
+{
+	int i;
+	for(i = 1; i < 11; i++){
+		logic_to_pixel_set(_row, i);
+	}
+}
+
+void screen_fill()
+{
+	int i;
+	for(i = 1; i < 21; i++){
+		row_fill(i);
+	}
+}
+
+
