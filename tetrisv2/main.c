@@ -82,7 +82,8 @@ int main(void) {
 
 	while(game)		
 	{
-	
+		display_string("SCORE:", 0, 0);
+		display_number(score, 1, 0);
 	
 		if(new_shape_flag == 1){
 			go_left_flag = 0;
@@ -93,7 +94,10 @@ int main(void) {
 			display_shape();
 
 			if( collision_check_down() )
-			{ game = 0; }
+			{ game = 0;
+			display_string("GAME OVER", 2, 0);
+			screen_fill();
+			}
 
 		}
 		display_print();
