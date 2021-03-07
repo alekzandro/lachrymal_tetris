@@ -176,4 +176,10 @@ uint8_t collision_check_down(void);
 uint8_t collision_check_rigth(void);
 uint8_t collision_check_left(void);
 uint8_t rotation_allowed_check(void);
+void display_digit(uint8_t number, uint8_t row, uint8_t col);
+void display_number(uint8_t number, uint8_t row, uint8_t col);
+void display_string(char* chr, uint8_t row, uint8_t col);
+int getSize(char* c);
+void screen_fill();
+void row_fill(uint8_t _row);
 
